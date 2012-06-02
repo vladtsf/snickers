@@ -15,7 +15,7 @@ Country.find({}, ['_id'], function(err, countries) {
 		idxs[idx] = country._id;
 	});
 
-	app.get(/star\/([\w\d]+)\/?/, function(req, res) {
+	app.post(/star\/([\w\d]+)\/?/, function(req, res) {
 		var id = req.route.params[0];
 
 		if(req.cookies.voted) {
