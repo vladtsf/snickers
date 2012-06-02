@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 /**
  * Module dependencies.
@@ -16,7 +17,7 @@ app.configure(function(){
   app.use(express.cookieParser());
   app.use(app.router);
   app.set('port', 3000);
-  app.set('mongobase', 'mongodb://localhost/test');
+  app.set('mongobase', 'mongodb://localhost/default');
   // app.set('mongobase', util.format('mongodb://%s:%s@%s:%d/%s', process.env.DBUSER, process.env.DBPASSWORD, process.env.DBHOST, process.env.DBPORT, process.env.DBBASE));
 });
 
