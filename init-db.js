@@ -2,6 +2,7 @@
 
 var
 	program = require('commander'),
+	ProgressBar = require('progress'),
 	Db = require('mongodb').Db,
 	connect = require('mongodb').connect;
 
@@ -13,26 +14,38 @@ program
 connect(program.args[0] || Db.DEFAULT_URL, function(err, db) {
 	db.collection('countries', function(err, collection) {
 
+		function end() {
+			db.close();
+			console.log('\n');
+		};
+
 		var
 			countries = require('./data/countries'),
 			length = countries.length;
+
+		var bar = new ProgressBar(':percent [:bar]', {
+				complete: '.'
+			,	incomplete: ' '
+			,	width: length*3
+			,	total: length
+		});
 
 		countries.forEach(function (data, index) {
 			collection.find({name : data.name})
 				.toArray(function (err, docs) {
 					if(docs.length === 0) {
 						collection.save(data, function() {
-							console.log('Added: ' + data.name);
+							bar.tick(1);
 
 							if(--length == 0) {
-								db.close();
+								end();
 							}
 						});
 					} else {
-						console.log('Exists: ' + data.name);
+						bar.tick(1);
 
 						if(--length == 0) {
-							db.close();
+							end();
 						}
 					}
 				});
