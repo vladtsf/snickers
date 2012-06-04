@@ -1,0 +1,1 @@
+Cufon.replace('.scroll-item-f span', { fontFamily: 'PlumbSoft' });

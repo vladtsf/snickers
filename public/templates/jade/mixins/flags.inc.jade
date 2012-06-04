@@ -1,0 +1,28 @@
+mixin flag-small(country)
+	i.flag-s(data-id=country._id, class="flag-#{country.flag}", alt=country.name, title=country.name)
+
+mixin flag-big(country)
+	.scroll-item-f
+		img(src="/images/flags/#{country.flag}.png", alt=country.name)
+		span.counter= country.rating
+
+mixin flags-dropdown(countries)
+	.flag-select-dropdown(style='display:none;')
+		i.fs-top
+		.fs-box
+			each country in countries
+				mixin flag-small(country)
+		i.fs-bot
+
+mixin scrolling-flags(countries)
+	.scrolling-flags
+		span.prevPage.browse.left.disabled Пред.
+		span.nextPage.browse.right След.
+		.scrollable-flag
+			.items-f
+				- for (var i = 0; i < 16; i+=3) {
+					.chunk
+						- for (var idx = i; idx <= i + 2 && countries[idx]; idx++) {
+							mixin flag-big(countries[idx])
+						- };
+				- }

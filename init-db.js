@@ -34,6 +34,7 @@ connect(program.args[0] || Db.DEFAULT_URL, function(err, db) {
 			collection.find({name : data.name})
 				.toArray(function (err, docs) {
 					if(docs.length === 0) {
+						data.rating = 0;
 						collection.save(data, function() {
 							bar.tick(1);
 

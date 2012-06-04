@@ -1,0 +1,11 @@
+include mixins/flags.inc.jade
+
+.widget-snickers
+	form.send-snickers(action='#')
+		span.flag-select
+			mixin flag-small(countries[random])
+		input.send-s-but(type='button', value='')
+		mixin flags-dropdown(countries)
+
+	.widget-foot
+		mixin scrolling-flags(countries)
