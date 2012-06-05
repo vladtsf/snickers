@@ -1,4 +1,5 @@
 .widget-snickers.widget-s-result
+	span.widget-tesult-text СБОРНУЮ #{country.accusative}
 	.flag-result
 		img(src="/images/flags/#{country.flag}.png", alt=country.name)
 
@@ -8,6 +9,5 @@
 				a.soc.fb(target='_blank', href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]=#{enc('http://www.sports.ru/#snickers_iframe')}&p[summary]=#{enc('Поддержи любимую сборную! Футболист - не футболист, когда голоден.')}&p[title]=#{enc('Я накормил сборную ' + country.accusative + '!')}&[images][0]=#{enc('http://s5o.ru/common/images/snickers.jpg')}")
 				a.soc.vk(target='_blank', href="http://vk.com/share.php?url=#{enc('http://www.sports.ru/#snickers_iframe')}&description=#{enc('Поддержи любимую сборную! Футболист - не футболист, когда голоден.')}&image=#{enc('http://s5o.ru/common/images/snickers.jpg')}&title=#{enc('Я накормил сборную ' + country.accusative + '!')}")
 				a.soc.tw(target='_blank', href="https://twitter.com/intent/tweet?&text=#{enc('Я накормил сборную ' + country.accusative + '!')}&url=#{enc('http://www.sports.ru/#snickers_iframe')}")
-	// country.accusative
 	script
-		Cufon.replace(".widget-snickers .accusative-name
+		Cufon.replace(".widget-snickers .widget-tesult-text");

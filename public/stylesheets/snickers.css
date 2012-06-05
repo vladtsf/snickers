@@ -6,6 +6,7 @@
 .send-snickers .flag-select > .flag-s {margin:7px 0 0 10px; vertical-align:top;}
 .send-snickers .send-s-but {background:url(/images/snickers/but.png) no-repeat 0 0; width:148px; height:46px; display:block; float:left; border:0; margin:0 0 0 -8px; cursor:pointer;}
 .flag-select-dropdown {width:238px; position:absolute; top:40px; left:0; z-index:30;}
+.widget-tesult-text {display:block; width:100%; position:absolute; top:84px; left:0; text-align:center; color:#f9b233; font-size:18px; line-height:15px;text-transform:uppercase;}
 .fs-top, .fs-bot, .fs-box {background-image:url(/images/snickers/select-bg.png); background-repeat:no-repeat;}
 .fs-top, .fs-bot {display:block; height:14px; background-position:0 0;}
 .fs-bot {background-position:0 -16px;}
