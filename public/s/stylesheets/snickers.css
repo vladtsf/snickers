@@ -1,13 +1,13 @@
 *{margin:0; padding:0;}
-.widget-snickers {background:url(/images/snickers/bg-full.png) no-repeat 0 0; width:300px; height:280px; overflow:hidden; position:relative; margin:0 0 20px;}
+.widget-snickers {background:url(/s/images/snickers/bg-full.png) no-repeat 0 0; width:300px; height:280px; overflow:hidden; position:relative; margin:0 0 20px;}
 .widget-s-result {background-position:-330px 0;}
 .send-snickers {margin:130px 0 0 26px; height:46px; position:relative; z-index:2;}
-.send-snickers .flag-select {display:block; float:left; background:url(/images/snickers/select.png) no-repeat 0 0; width:78px; height:26px; padding:10px; cursor:pointer;}
+.send-snickers .flag-select {display:block; float:left; background:url(/s/images/snickers/select.png) no-repeat 0 0; width:78px; height:26px; padding:10px; cursor:pointer;}
 .send-snickers .flag-select > .flag-s {margin:7px 0 0 10px; vertical-align:top;}
-.send-snickers .send-s-but {background:url(/images/snickers/but.png) no-repeat 0 0; width:148px; height:46px; display:block; float:left; border:0; margin:0 0 0 -8px; cursor:pointer;}
+.send-snickers .send-s-but {background:url(/s/images/snickers/but.png) no-repeat 0 0; width:148px; height:46px; display:block; float:left; border:0; margin:0 0 0 -8px; cursor:pointer;}
 .flag-select-dropdown {width:238px; position:absolute; top:40px; left:0; z-index:30;}
 .widget-tesult-text {display:block; width:100%; position:absolute; top:84px; left:0; text-align:center; color:#f9b233; font-size:18px; line-height:15px;text-transform:uppercase;}
-.fs-top, .fs-bot, .fs-box {background-image:url(/images/snickers/select-bg.png); background-repeat:no-repeat;}
+.fs-top, .fs-bot, .fs-box {background-image:url(/s/images/snickers/select-bg.png); background-repeat:no-repeat;}
 .fs-top, .fs-bot {display:block; height:14px; background-position:0 0;}
 .fs-bot {background-position:0 -16px;}
 .fs-box {background-position:-244px 0; background-repeat:repeat-y; padding:0 9px 0 20px; overflow:hidden;}
@@ -16,7 +16,7 @@
 .widget-foot {width:100%; height:92px; position:absolute; bottom:0; left:0; }
 	.widget-social-box {width:240px; height:2px; background:#fff; margin:11px auto 0; position:relative; }
 	.widget-social-box .social-icons-big {width:90px; height:22px; position:absolute; left:50%; margin:-11px 0 0 -45px; padding:0; background:#713a11; text-align:center;}
-	.social-icons-big .soc {display:inline-block; width:22px; height:22px; background-image:url(/images/social-icons.png); background-repeat:no-repeat; margin:0 5px 0 0; vertical-align:middle;}
+	.social-icons-big .soc {display:inline-block; width:22px; height:22px; background-image:url(/s/images/social-icons.png); background-repeat:no-repeat; margin:0 5px 0 0; vertical-align:middle;}
 	.social-icons-big .fb {background-position:0 0;}
 	.social-icons-big .vk {background-position:-24px 0;}
 	.social-icons-big .tw {background-position:-48px 0; margin:0;}
@@ -31,7 +31,7 @@
 		.scroll-item-f IMG {display:block; margin-top:-9px;}
 		.scroll-item-f .counter {font-size:18px; line-height:15px; color:#f9b233; display:block; text-align:center; margin:-5px 0 -2px 3px;}
 
-	.scrolling-flags span.browse {display:block; width:8px; height:12px; cursor:pointer; text-indent:-9999px; background-image:url(/images/snickers/arrs.gif); background-repeat:no-repeat; position:absolute; top:20px; z-index:13;} 
+	.scrolling-flags span.browse {display:block; width:8px; height:12px; cursor:pointer; text-indent:-9999px; background-image:url(/s/images/snickers/arrs.gif); background-repeat:no-repeat; position:absolute; top:20px; z-index:13;} 
 	.scrolling-flags span.left {background-position:0 -15px; left:-20px;} 
 	.scrolling-flags span.right {background-position:-12px -15px; right:-20px;} 
 	.scrolling-flags span.left.disabled {background-position:0 0; cursor:default;} 
