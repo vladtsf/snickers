@@ -1,2 +1,2 @@
 jade:
-	./templates/jade.sh > ./javascripts/templates.js
+	./s/templates/jade.sh > ./s/javascripts/templates.js
