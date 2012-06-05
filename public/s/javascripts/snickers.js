@@ -185,7 +185,7 @@
 										})
 										.then(function(data, status) {
 											if(data.success) {
-												Cookie.set('client_voted', id, 86400);
+												Cookie.set('client_voted', id, new Date(Date.now()+86400e3).toGMTString());
 
 												this.$context.html(tpl['widget-results.jade']({
 													country	: this.getCountry(id),
