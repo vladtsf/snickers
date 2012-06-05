@@ -27,6 +27,7 @@
 		var $context = $('<div id="snickersContext"></div>').prependTo(document.body);
 
 		this._currentSlide = 0;
+		this._selectOpened = false;
 
 		this
 			.init($context, {
@@ -138,8 +139,27 @@
 										.when($items)
 										.then(this.unlock.bind(this));
 								})
+								.on('click', this.$context, function(e) {
+									if(this._selectOpened) {
+										var $dropdown = cache(selectors.flagsDropdown, this.$context);
+
+										if($dropdown.is(e.target) || $dropdown.has(e.target)) {
+											this.lock();
+
+											this._selectOpened = false;
+
+											$
+												.when($flagsDropdown.fadeOut(100))
+												.then(this.unlock.bind(this));
+
+											return false;
+										}
+									}
+								})
 								.on('click', selectors.flagSelect, function(e) {
 									this.lock();
+
+									this._selectOpened = !this._selectOpened;
 
 									$
 										.when($flagsDropdown.fadeToggle(100))
