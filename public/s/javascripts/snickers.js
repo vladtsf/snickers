@@ -75,7 +75,20 @@
 								});
 
 								return country;
-							}
+							};
+
+							this.getCountryIDX = function(name) {
+								var idx;
+
+								$.each(countries, function(i, e) {
+									if(e.name == name) {
+										idx = i;
+										return false;
+									}
+								});
+
+								return idx;
+							};
 
 							if(Cookie.get('client_voted')) {
 								this.$context.html(tpl['widget-results.jade']({
@@ -88,7 +101,7 @@
 
 							this.$context.html(tpl['widget-vote.jade']({
 								countries	: countries,
-								random		: Math.floor(Math.random() * 1000) % 16
+								random		: this.getCountryIDX('Россия')
 							}));
 
 							var
