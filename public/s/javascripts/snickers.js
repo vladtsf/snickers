@@ -187,6 +187,8 @@
 											if(data.success) {
 												Cookie.set('client_voted', id, new Date(Date.now()+86400e3).toGMTString());
 
+												this._selectOpened = false;
+
 												this.$context.html(tpl['widget-results.jade']({
 													country	: this.getCountry(id),
 													enc		: encodeURIComponent
