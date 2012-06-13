@@ -1,5 +1,5 @@
 var app = require('../../app')
 
 app.get('/', function (req, res) {
-	res.render('index');
+	res.render('index', {ui:1});
 })
