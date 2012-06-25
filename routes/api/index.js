@@ -48,8 +48,8 @@ Country.find({}, ['_id'], function(err, countries) {
 	app.get('/countries.json', function(req, res) {
 		Country
 			.find({})
-			.desc('rating')
-			.run(function (err, countries) {
+			.sort('rating', 'descending')
+			.exec(function (err, countries) {
 				if(err) {
 					res.json([]);
 				} else {
@@ -73,7 +73,7 @@ Country.find({}, ['_id'], function(err, countries) {
 						}
 					},
 					function() {
-						console.log(util.format('[%d]: %s +%d', idx, id, value));
+						console.log(util.format('[%s]: %s +%d', new Date, id, value));
 					}
 				);
 			}
